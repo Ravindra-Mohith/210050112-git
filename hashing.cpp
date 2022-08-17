@@ -12,12 +12,12 @@ int pow(int a, int b)
     return k;
 }
 
-int hash_string(string s)
+int hash_string(string s, int m)
 {
     int result = 0;
     for (int i = 0; i < s.length(); i++)
     {
-        result += (s[i] * pow(89, i)) % 13;
+        result += (s[i] * pow(m, i)) % 13;
     }
     return result % 13;
 }
